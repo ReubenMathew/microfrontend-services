@@ -1,3 +1,9 @@
+## Docker instructions react app:
+1. docker build -t sample:dev .
+2. docker run -v /app/node_modules -p 3001:3000 sample:dev
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
