@@ -1,0 +1,28 @@
+version: '3'
+
+
+services:
+
+  react:
+    container_name: react
+    build:
+      context: ./react-service
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3001:3000'
+    environment:
+      - NODE_ENV=development
+
+  vue:
+    container_name: vue
+    build:
+      context: ./vue-service
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8081:8080'
